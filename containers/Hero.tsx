@@ -10,7 +10,7 @@ const Hero = () => {
         <Icon className="h-9 w-9" icon="la:imdb" color="#f6c700" />
         <span>8.5</span>
       </div>
-      <span>Action | Adventure | Fantasy</span>
+      <span className="mt-3 mb-2">Action | Adventure | Fantasy</span>
     </div>
   );
 };
