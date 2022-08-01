@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div >
       <Head>
-        <title>Your App Name</title>
+        <title>HBO Max Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
