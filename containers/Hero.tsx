@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { Button } from "../components";
 
 const Hero = () => {
   return (
@@ -10,7 +11,12 @@ const Hero = () => {
         <Icon className="h-9 w-9" icon="la:imdb" color="#f6c700" />
         <span>8.5</span>
       </div>
-      <span className="mt-3 mb-2">Action | Adventure | Fantasy</span>
+      <span className="mt-3">Action | Adventure | Fantasy</span>
+      <span className="mt-2">2021 | PG-13 | 2h 28m</span>
+
+      <div className="mt-7">
+        <Button title="Watch Now" icon="ci:play-circle-outline" />
+      </div>
     </div>
   );
 };
