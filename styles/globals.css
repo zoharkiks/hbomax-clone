@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 
-/* For Custom fonts */
-/* @font-face {
-    font-family: "WorldwideHeadline";
-    src: url("../public/fonts/WorldwideHeadline.ttf");
+ @font-face {
+    font-family: "Gilroy Regular";
+    font-weight: normal;
+    src: url("/fonts/Gilroy-Regular.ttf")   ;
 
-    font-family: "Blooming Elegant Sans";
-    src: url("../public/fonts/Blooming\ Elegant\ Sans.otf");
+    font-family: "Gilroy Medium";
+    font-weight: medium;
+    src: url("/fonts/Gilroy-Medium.ttf");
 
-  } */
+    font-family: "Gilroy Bold";
+    src: url("/fonts/Gilroy-Bold.ttf");
+
+    
+
+  }
