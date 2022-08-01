@@ -9,9 +9,9 @@ module.exports = {
 
 
     fontFamily: {
-      gilreg: ["Gilroy Regular", "cursive"],
-      gilmed: ["Gilroy Medium", "cursive"],
-      gilbold: ["Gilroy Bold", "cursive"],
+      gilreg: ["Gilroy Regular", "sans-serif"],
+      gilmed: ["Gilroy Medium", "sans-serif"],
+      gilbold: ["Gilroy Bold", "sans-serif"],
      
     },
 
