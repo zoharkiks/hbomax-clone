@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-// import components
-import {Navbar, Footer,Hero}  from '../containers'
+// import containers
+import {Footer,Hero}  from '../containers'
+// import components 
+import {Navbar}  from '../components'
 
 const Home: NextPage = () => {
   return (

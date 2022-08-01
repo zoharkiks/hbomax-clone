@@ -1,5 +1,5 @@
 // // Import all components here for easy exports
 
-// import  ....  from "....";
+import  Navbar  from "./Navbar"
 
-// export {.....}
+export {Navbar}
