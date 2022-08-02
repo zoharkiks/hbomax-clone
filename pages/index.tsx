@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 // import containers
-import { Footer, Hero, Popular } from "../containers";
+import { Footer, Hero, NewReleases, Popular } from "../containers";
 // import components
 import { Navbar } from "../components";
 
@@ -18,6 +18,7 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <Popular />
+      <NewReleases/>
       <Footer />
     </div>
   );
