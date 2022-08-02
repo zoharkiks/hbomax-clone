@@ -2,5 +2,6 @@
 
 import  Navbar  from "./Navbar"
 import  Button  from "./Button"
+import  PopularCard  from "./PopularCard"
 
-export {Navbar,Button}
+export {Navbar,Button,PopularCard}

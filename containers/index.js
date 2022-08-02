@@ -2,5 +2,6 @@
 
 import  Footer  from "./Footer";
 import  Hero  from "./Hero";
+import  Popular  from "./Popular";
 
-export {Footer, Hero}
+export {Footer, Hero,Popular}
