@@ -5,7 +5,7 @@ import { Button } from "../components";
 const Hero = () => {
   return (
     <div className="mt-10 md:mt-14 flex flex-col items-start justify-center font-gilmed text-white">
-      <h1 className="font-gilbold text-2xl md:text-[2.5rem] lg:text-[5rem] w-1/2 leading-[3rem] lg:leading-[6rem] uppercase">Spider-Man: 
+      <h1 className="font-gilbold text-2xl  md:text-[2.5rem] leading-[2rem] lg:text-[5rem] w-1/2 md:leading-[3rem] lg:leading-[6rem] uppercase">Spider-Man: 
 No Way Home</h1>
 
       <div className="mt-2 flex items-center justify-center space-x-2 text-sm md:text-lg lg:order-">
