@@ -8,7 +8,7 @@ const Details = () => {
       <span className="mt-2 md:order-first md:mt-0 md:mb-4 lg:text-xl">
         2021 | PG-13 | 2h 28m
       </span>
-      <h1 className="w-1/2 font-gilbold text-2xl uppercase leading-[3rem] md:text-[2.5rem] lg:text-[5rem] lg:leading-[6rem]">
+      <h1 className="w-1/2 font-gilbold text-2xl mt-6 uppercase leading-[2rem] md:leading-[3rem] md:text-[2.5rem] lg:text-[5rem] lg:leading-[6rem]">
         Spider-Man: No Way Home
       </h1>
       <span className="mt-3 md:text-xl lg:text-3xl">
