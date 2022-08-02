@@ -5,5 +5,6 @@ import  Hero  from "./Hero";
 import  Popular  from "./Popular";
 import  NewReleases  from "./NewReleases";
 import  CastCrew  from "./CastCrew";
+import  DetailsHero  from "./DetailsHero";
 
-export {Footer, Hero,Popular,NewReleases,CastCrew}
+export {Footer, Hero,Popular,NewReleases,CastCrew,DetailsHero}

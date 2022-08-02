@@ -1,21 +1,20 @@
-import React from 'react'
-import { Navbar,DetailsInfo } from '../../components'
-import { CastCrew } from '../../containers'
+import React from "react";
+import { Navbar } from "../../components";
+import { CastCrew,DetailsHero } from "../../containers";
 
 const Details = () => {
   return (
     <div className="bg-black   ">
- <div className="  md:h-screen bg-[url('https://m.media-amazon.com/images/I/71mUK6cPosL._SL1280_.jpg')] bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12">
+      <div className="  bg-[url('https://m.media-amazon.com/images/I/71mUK6cPosL._SL1280_.jpg')] bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12">
         <Navbar />
-        <DetailsInfo/>
+        <DetailsHero/>
       </div>
 
       <div className="p-5  md:px-9 lg:px-12">
-        <CastCrew/>
+        <CastCrew />
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;

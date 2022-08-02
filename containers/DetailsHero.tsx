@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
-import React from "react";
-import Button from "./Button";
+import { Icon } from '@iconify/react'
+import React from 'react'
+import { Button } from '../components'
 
 const Details = () => {
   return (
@@ -14,7 +14,7 @@ const Details = () => {
       <span className="mt-3 md:text-xl lg:text-3xl">
         Action | Adventure | Fantasy
       </span>
-      <div className="lg:order- mt-2 flex items-center justify-center space-x-2 text-sm md:text-lg">
+      <div className="lg:order- mt-5 flex items-center justify-center space-x-2 text-sm md:text-lg">
         <Icon
           className="h-9 w-9 md:h-12 md:w-12 "
           icon="la:imdb"
@@ -23,7 +23,7 @@ const Details = () => {
         <span>8.5</span>
       </div>
 
-      <div className="flex space-x-5 mt-7">
+      <div className="flex space-x-5 mt-10">
         <Button
           title="Watch Now"
           icon="ci:play-circle-outline"
@@ -43,7 +43,7 @@ const Details = () => {
     RRR is a period drama set in India during the 1920s, revolving around the inspiring journey of two of India`s freedom fighters - Alluri Sitarama Raju and Komaram Bheem.
     </p>
     </div>
-  );
-};
+  )
+}
 
-export default Details;
+export default Details
