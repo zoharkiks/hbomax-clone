@@ -18,7 +18,7 @@ const Navbar = () => {
         icon="typcn:th-menu"
       />
 
-      <ul className="hidden md:flex space-x-6 text-white lg:space-x-20">
+      <ul className="hidden space-x-6 text-white md:flex lg:space-x-20">
         <li>
           <a href="">Movies</a>
         </li>
@@ -30,11 +30,25 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <img
-        className="h-12 w-12 rounded-full object-cover hidden md:block cursor-pointer "
-        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
-        alt=""
-      />
+      <div className="hidden md:flex justify-evenly items-center md:space-x-1 lg:space-x-9  ">
+        <form className=" flex items-center justify-between  rounded-[10px] bg-white bg-opacity-60 p-3 md:py-1  ">
+          <Icon
+            className=" h-4 w-4 mr-2 text-white"
+            icon="ant-design:search-outlined"
+          />
+          <input
+            placeholder="Search"
+            className="bg-transparent text-black  outline-none placeholder:text-black  md:w-[8rem] lg:w-full"
+            type="text"
+          />
+        </form>
+
+        <img
+          className=" h-12 w-12 cursor-pointer rounded-full object-cover  "
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+          alt=""
+        />
+      </div>
 
       {opened ? (
         <div className="absolute right-0 top-0 w-max flex-col rounded-[20px] bg-black bg-opacity-40 py-6 px-4 text-white backdrop-blur-[200px]  ">
