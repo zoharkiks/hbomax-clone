@@ -18,7 +18,7 @@ const Navbar = () => {
         icon="typcn:th-menu"
       />
 
-      <ul className="hidden md:flex space-x-6 text-white lg:space-x-12">
+      <ul className="hidden md:flex space-x-6 text-white lg:space-x-20">
         <li>
           <a href="">Movies</a>
         </li>
