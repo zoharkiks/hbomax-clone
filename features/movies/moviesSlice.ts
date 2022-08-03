@@ -6,11 +6,12 @@ const initialState = {
     isLoading: true,
   };
 
-  const movieSlice = createSlice({
-    name: 'movie',
+  const moviesSlice = createSlice({
+    name: 'movies',
     initialState,
+    
   })
 
-  export default movieSlice.reducer;
+  export default moviesSlice.reducer;
 
 
