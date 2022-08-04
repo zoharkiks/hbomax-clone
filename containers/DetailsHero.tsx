@@ -10,8 +10,6 @@ import { useSelector} from "react-redux";
 const Details = () => {
 
   const details = useSelector((state) => state.movies.details);
-
-  console.log(details);
   
   
   return (
@@ -43,7 +41,7 @@ const Details = () => {
          <Button
           title="Add In My List"
           icon="carbon:add-alt"
-          extra="p-2.5 md:p-4 lg:p-6 "
+          extra="p-2.5 md:p-4 lg:p-6 border-white "
         />
       </div>
 
