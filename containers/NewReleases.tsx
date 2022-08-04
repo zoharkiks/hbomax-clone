@@ -27,7 +27,7 @@ const NewReleases = () => {
     <div className="mt-6 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex space-x-5">
-        {upcomingMovies?.slice(0, 3).map((movie: any) => (
+        {upcomingMovies?.slice(0, 4).map((movie: any) => (
           <NewReleasesCard
             key={movie.id}
             title={movie.title}

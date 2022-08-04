@@ -6,8 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@egjs/react-flicking": "^4.9.1",
     "@reduxjs/toolkit": "^1.8.3",
-    "keen-slider": "^6.7.0",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
