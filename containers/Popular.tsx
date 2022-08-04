@@ -4,7 +4,7 @@ import { PopularCard } from "../components";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Reducers
-import { getPopularMovies } from "../features/movies/moviesSlice";
+import { getPopularMovies,getDetails } from "../features/movies/moviesSlice";
 
 const Popular = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,9 @@ const Popular = () => {
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
 
+
+  
+
   return (
     <div className="mt-20 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Popular Collections</h1>
@@ -24,6 +27,7 @@ const Popular = () => {
           <PopularCard
             key={movie.id}
             image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            clickFunction={() => (dispatch(getDetails(movie.id)))           }
           />
         ))}
       </div>

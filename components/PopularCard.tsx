@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PopuplarCard = ({image}:{image:string}) => {
+const PopuplarCard = ({image,clickFunction}:{image:string,clickFunction:any}) => {
   return (
     <>
-    <img className='w-[108px] h-[139px] md:w-[148px] md:h-[179px] lg:w-[219px] lg:h-[280px] object-fit rounded-xl' src={image} alt="" />
+    <img onClick={clickFunction} className='w-[30%] md:w-[20%]  lg:w-[15%]  object-fit rounded-xl' src={image} alt="" />
     </>
   )
 }
