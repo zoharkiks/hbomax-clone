@@ -1,8 +1,8 @@
 import React from "react";
 
-const NewReleasesCard = ({title,image}:{title:string,image:string}) => {
+const NewReleasesCard = ({title,image,clickFunction}:{title:string,image:string,clickFunction:any}) => {
   return (
-    <div  className={`flex h-[146px] w-[176px] md:h-[186px] md:w-[206px] lg:h-[280px] lg:w-[338px] items-end rounded-[10px] bg-cover bg-center bg-no-repeat`}
+    <div onClick={clickFunction}  className={`flex h-[146px] w-[176px] md:h-[186px] md:w-[206px] lg:h-[280px] lg:w-[338px] items-end rounded-[10px] bg-cover bg-center bg-no-repeat`}
     style={{backgroundImage: `url(${image})`}}
 
     

@@ -18,9 +18,8 @@ const Popular = () => {
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
-const test= (id) => {
+const fetchDetails= (id) => {
   dispatch(getDetails(id))
-  console.log('yayyyyy')
   router.push('/details/'+id)
 }
 
@@ -34,7 +33,7 @@ const test= (id) => {
           <PopularCard
             key={movie.id}
             image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-            clickFunction={() => test(movie.id)}
+            clickFunction={() => fetchDetails(movie.id)}
           />
         ))}
       </div>
