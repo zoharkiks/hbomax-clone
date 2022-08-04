@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useRouter } from 'next/router'
 import { PopularCard } from "../components";
 
 // Redux
@@ -8,6 +9,8 @@ import { getPopularMovies,getDetails } from "../features/movies/moviesSlice";
 
 const Popular = () => {
   const dispatch = useDispatch();
+  const router = useRouter()
+
 
   useEffect(() => {
     dispatch(getPopularMovies());
@@ -15,9 +18,13 @@ const Popular = () => {
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
+const test= (id) => {
+  dispatch(getDetails(id))
+  console.log('yayyyyy')
+  router.push('/details/'+id)
+}
 
 
-  
 
   return (
     <div className="mt-20 flex flex-col font-gilbold text-lg text-white">
@@ -27,7 +34,7 @@ const Popular = () => {
           <PopularCard
             key={movie.id}
             image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-            clickFunction={() => (dispatch(getDetails(movie.id)))           }
+            clickFunction={() => test(movie.id)}
           />
         ))}
       </div>

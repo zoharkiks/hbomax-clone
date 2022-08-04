@@ -2,10 +2,16 @@ import React from "react";
 import { Navbar } from "../../components";
 import { CastCrew,DetailsHero } from "../../containers";
 
+// Redux
+import { useSelector} from "react-redux";
+
+
 const Details = () => {
+  const details = useSelector((state) => state.movies.details);
+
   return (
     <div className="bg-black   ">
-      <div className="  bg-[url('https://m.media-amazon.com/images/I/71mUK6cPosL._SL1280_.jpg')] bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12">
+      <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${details?.backdrop_path})`}} className=" bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12">
         <Navbar />
         <DetailsHero/>
       </div>
