@@ -8,7 +8,7 @@ import { Navbar } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black ">
       <Head>
         <title>HBO Max Clone</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Hero />
       </div>
-      <div className="p-5  md:px-9 lg:px-12">
+      <div className="px-5 pb-7  md:px-9 lg:px-12">
         <Popular />
         <NewReleases />
       
