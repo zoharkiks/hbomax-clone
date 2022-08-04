@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { NewReleasesCard } from "../components";
 import { useRouter } from "next/router";
 
+// Carousel
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Reducers
@@ -26,15 +29,19 @@ const NewReleases = () => {
   return (
     <div className="mt-6 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
-      <div className="mt-5 flex space-x-5">
-        {upcomingMovies?.slice(0, 4).map((movie: any) => (
+      <div className="mt-5 flex">
+        <Flicking moveType='freeScroll' align='prev' circular={true} >
+        {upcomingMovies?.slice(0, 16).map((movie: any) => (
+          <div className="mr-4">
           <NewReleasesCard
             key={movie.id}
             title={movie.title}
             image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
             clickFunction={() => fetchDetails(movie.id)}
           />
+          </div>
         ))}
+        </Flicking>
       </div>
     </div>
   );
