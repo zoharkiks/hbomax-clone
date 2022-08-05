@@ -11,7 +11,7 @@ const PopuplarCard = ({
     <>
       <img
         onClick={clickFunction}
-        className="rounded-xl  object-cover w-full h-full"
+        className="h-full  w-full cursor-pointer rounded-xl object-cover hover:scale-105 transition-all"
         src={image}
         alt=""
       />

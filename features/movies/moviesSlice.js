@@ -76,7 +76,7 @@ const moviesSlice = createSlice({
       state.isLoading = false;
       state.upcoming = action.payload;
     },
-    [getPopularMovies.rejected]: (state) => {
+    [getUpcomingMovies.rejected]: (state) => {
       state.isLoading = false;
     },
 

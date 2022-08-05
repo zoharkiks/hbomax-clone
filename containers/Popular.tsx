@@ -31,7 +31,7 @@ const Popular = () => {
       <div className="mt-4 flex items-center ">
         <Flicking moveType='freeScroll' align='prev' circular={true} >
           {movies?.slice(0, 10).map((movie: any) => (
-            <div key={movie.id} className='w-[35%] mr-4 md:w-[25%] lg:w-[15%] lg:mr-6'>
+            <div key={movie.id} className='w-[35%] mr-4 md:w-[25%] lg:w-[15%] lg:mr-6 '>
               <PopularCard
                 
                 image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
