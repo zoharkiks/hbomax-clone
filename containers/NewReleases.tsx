@@ -11,14 +11,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDetails, getUpcomingMovies } from "../features/movies/moviesSlice";
 
 const NewReleases = () => {
-  const router = useRouter()
+  const router = useRouter();
   const dispatch = useDispatch();
 
-  const fetchDetails= (id) => {
-    dispatch(getDetails(id))
-    router.push('/details/'+id)
-  }
-  
+  const fetchDetails = (id) => {
+    dispatch(getDetails(id));
+    router.push("/details/" + id);
+  };
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
@@ -30,17 +29,16 @@ const NewReleases = () => {
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
-        <Flicking moveType='freeScroll' align='prev' circular={true} >
-        {upcomingMovies?.slice(0, 16).map((movie: any) => (
-          <div key={movie.id} className="mr-4">
-          <NewReleasesCard
-            
-            title={movie.title}
-            image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
-            clickFunction={() => fetchDetails(movie.id)}
-          />
-          </div>
-        ))}
+        <Flicking moveType="freeScroll" align="prev" circular={true}>
+          {upcomingMovies?.slice(0, 16).map((movie: any) => (
+            <div key={movie.id} className="mr-4  ">
+              <NewReleasesCard
+                title={movie.title}
+                image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
+                clickFunction={() => fetchDetails(movie.id)}
+              />
+            </div>
+          ))}
         </Flicking>
       </div>
     </div>

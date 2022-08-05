@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import { CastCrewCard } from "../components";
+
+// Carousel
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Reducers
@@ -24,27 +28,36 @@ const CastCrew = () => {
         Cast
       </h1>
       <div className="mt-5 flex space-x-10">
-        {casts?.slice(0, 3).map((cast: any) => (
-          <CastCrewCard
-            key={cast.id}
-            name={cast.name}
-            size="h-20 w-20 md:h-32 md:w-32"
-            image={`https://image.tmdb.org/t/p/w300${cast?.profile_path}`}
-          />
-        ))}
+        <Flicking moveType="freeScroll" align="prev" circular={false}>
+          {casts?.slice(0, 10).map((cast: any) => (
+            <div
+              key={cast.id}
+              className="mr-2 w-[20%%] md:mr-4 lg:mr-8 "
+            >
+              <CastCrewCard
+                name={cast.name}
+                size="h-20 w-20 md:h-32 md:w-32"
+                image={`https://image.tmdb.org/t/p/w300${cast?.profile_path}`}
+              />
+            </div>
+          ))}
+        </Flicking>
       </div>
 
       <div className="mt-10 flex flex-col font-gilbold text-lg">
         <h1 className="md:text-xl lg:text-3xl">Crew</h1>
         <div className="mt-5 flex space-x-10">
-          {crews?.slice(0, 3).map((crew: any) => (
-            <CastCrewCard
+          <Flicking moveType="freeScroll" align="prev" circular={false}>
+          {crews?.slice(0, 15).map((crew: any) => (
+          <div className="mr-2 w-[20%%] md:mr-4 lg:mr-8">  <CastCrewCard
               key={crew.id}
               name={crew.name}
               size="h-20 w-20 md:h-32 md:w-32"
-              image={`https://image.tmdb.org/t/p/w300${crew?.profile_path}`}
+              image={`https://image.tmdb.org/t/p/original${crew?.profile_path}`}
             />
+            </div>
           ))}
+          </Flicking>
         </div>
       </div>
     </div>
