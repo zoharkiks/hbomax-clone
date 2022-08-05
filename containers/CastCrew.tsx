@@ -15,12 +15,13 @@ const CastCrew = () => {
   const details = useSelector((state) => state.movies.details);
   const casts = useSelector((state) => state.movies.credits.cast);
   const crews = useSelector((state) => state.movies.credits.crew);
+  const test = useSelector((state) => state.movies.credits);
 
   useEffect(() => {
     dispatch(getCredits(details.id));
   }, [details]);
 
-  console.log(crews);
+  // console.log(test.cast?.[0].id);
 
   return (
     <div className="mt-4 flex flex-col font-gilbold text-lg text-white lg:mt-14">
@@ -30,11 +31,9 @@ const CastCrew = () => {
       <div className="mt-5 flex space-x-10">
         <Flicking moveType="freeScroll" align="prev" circular={false}>
           {casts?.slice(0, 10).map((cast: any) => (
-            <div
-              key={cast.id}
-              className="mr-2 w-[20%%] md:mr-4 lg:mr-8 "
-            >
+            <div key={casts.credit_id} className="mr-2 w-[20%%] md:mr-4 lg:mr-8 ">
               <CastCrewCard
+                key={cast.credit_id}
                 name={cast.name}
                 size="h-20 w-20 md:h-32 md:w-32"
                 image={`https://image.tmdb.org/t/p/w300${cast?.profile_path}`}
@@ -48,15 +47,17 @@ const CastCrew = () => {
         <h1 className="md:text-xl lg:text-3xl">Crew</h1>
         <div className="mt-5 flex space-x-10">
           <Flicking moveType="freeScroll" align="prev" circular={false}>
-          {crews?.slice(0, 15).map((crew: any) => (
-          <div className="mr-2 w-[20%%] md:mr-4 lg:mr-8">  <CastCrewCard
-              key={crew.id}
-              name={crew.name}
-              size="h-20 w-20 md:h-32 md:w-32"
-              image={`https://image.tmdb.org/t/p/original${crew?.profile_path}`}
-            />
-            </div>
-          ))}
+            {crews?.slice(0, 15).map((crew: any) => (
+              <div key={crews.credit_id} className="mr-2 w-[20%%] md:mr-4 lg:mr-8">
+                {" "}
+                <CastCrewCard
+                  name={crew.name}
+                  key={crew.credit_id}
+                  size="h-20 w-20 md:h-32 md:w-32"
+                  image={`https://image.tmdb.org/t/p/w300${crew?.profile_path}`}
+                />
+              </div>
+            ))}
           </Flicking>
         </div>
       </div>

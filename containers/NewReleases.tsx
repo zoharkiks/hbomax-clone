@@ -31,7 +31,7 @@ const NewReleases = () => {
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
           {upcomingMovies?.slice(0, 16).map((movie: any) => (
-            <div key={movie.id} className="mr-4  ">
+            <div key={movie?.id} className="mr-4  ">
               <NewReleasesCard
                 title={movie.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
