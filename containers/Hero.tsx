@@ -5,13 +5,13 @@ import { useSelector } from "react-redux";
 
 
 
-const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string}) => {
+const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string,image:string}) => {
 
 
   return (
     <div style={{
       backgroundImage: `url(https://image.tmdb.org/t/p/original${image})`,
-    }} className=" p-5 md:px-9 bg-cover bg-center bg-no-repeat lg:h-screen lg:px-12 flex flex-col items-start justify-center space-y-6 font-gilmed text-white lg:space-y-8 pt-24 lg:pt-0 ">
+    }} className="h-[70vh] p-5 md:px-9 bg-cover bg-center bg-no-repeat lg:h-screen lg:px-12 flex flex-col items-start justify-center space-y-6 font-gilmed text-white lg:space-y-8  ">
      
       <h1 className="w-1/2 font-gilbold text-2xl  uppercase leading-[2rem] md:mt-6 md:text-[2.5rem] md:leading-[3rem] lg:text-[5rem] lg:leading-[6rem]">
        {title}
@@ -24,9 +24,9 @@ const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string}
         />
         <span>{rating}</span>
       </div>
-      <span className="mt-3 md:text-xl lg:text-3xl">
+      {/* <span className="mt-3 md:text-xl lg:text-3xl">
         Action | Adventure | Fantasy
-      </span>
+      </span> */}
       <span className="mt-2 md:order-first md:mt-0 md:mb-4 lg:text-xl">
        {` ${date}`}
       </span>
@@ -36,6 +36,7 @@ const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string}
           title="Watch Now"
           icon="ci:play-circle-outline"
           extra="p-2.5 md:p-4 lg:p-6"
+          clickFunction={""}
         />
       </div>
 

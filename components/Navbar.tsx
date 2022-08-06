@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="left-0 right-0 top-[2%] mx-auto my-0 flex items-center justify-between rounded-[20px] bg-black bg-opacity-40 p-6 font-gilmed backdrop-blur-[10px]  fixed z-10 md:w-[90%] md:px-12   ">
+    <div className="left-0 right-0 top-[2%] mx-auto my-0 flex items-center justify-between rounded-[20px] bg-black bg-opacity-40 p-6 font-gilmed backdrop-blur-[10px] w-[95%] fixed z-10 md:w-[90%] md:px-12   ">
       <img className="" src={images.logo.src} alt="logo" />
       <Icon
         onClick={toggleMenu}
