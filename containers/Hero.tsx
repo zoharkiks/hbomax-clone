@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { Button } from "../components";
+import { useSelector } from "react-redux";
 
 
 
-const Hero = () => {
+const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string}) => {
 
-;
 
   return (
-    <div className="mt-10 flex  flex-col items-start justify-center space-y-6 font-gilmed text-white md:mt-14 lg:space-y-8">
+    <div style={{
+      backgroundImage: `url(https://image.tmdb.org/t/p/original${image})`,
+    }} className=" p-5 md:px-9 bg-cover bg-center bg-no-repeat lg:h-screen lg:px-12 flex flex-col items-start justify-center space-y-6 font-gilmed text-white lg:space-y-8 pt-24 lg:pt-0 ">
+     
       <h1 className="w-1/2 font-gilbold text-2xl  uppercase leading-[2rem] md:mt-6 md:text-[2.5rem] md:leading-[3rem] lg:text-[5rem] lg:leading-[6rem]">
-        Spider No Way Home
+       {title}
       </h1>
       <div className="lg:order- mt-2 flex items-center justify-center space-x-2 text-sm md:text-lg">
         <Icon
@@ -19,13 +22,13 @@ const Hero = () => {
           icon="la:imdb"
           color="#f6c700"
         />
-        <span>8.5</span>
+        <span>{rating}</span>
       </div>
       <span className="mt-3 md:text-xl lg:text-3xl">
         Action | Adventure | Fantasy
       </span>
       <span className="mt-2 md:order-first md:mt-0 md:mb-4 lg:text-xl">
-        2021 | PG-13 | 2h 28m
+       {` ${date}`}
       </span>
 
       <div className="mt-7">
@@ -35,6 +38,7 @@ const Hero = () => {
           extra="p-2.5 md:p-4 lg:p-6"
         />
       </div>
+
     </div>
   );
 };

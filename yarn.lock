@@ -35,7 +35,12 @@
   "resolved" "https://registry.npmjs.org/@egjs/component/-/component-3.0.2.tgz"
   "version" "3.0.2"
 
-"@egjs/flicking@~4.9.1":
+"@egjs/flicking-plugins@^4.4.0":
+  "integrity" "sha512-PhhA9XB8145QxLAhIPDfzSszMvW02Be5ZbJFUkwgfkzt/A1QvJ56W02Nv4yAwjLIl48hI8MF0enG0RL3AuP3Uw=="
+  "resolved" "https://registry.npmjs.org/@egjs/flicking-plugins/-/flicking-plugins-4.4.0.tgz"
+  "version" "4.4.0"
+
+"@egjs/flicking@^4.1.0", "@egjs/flicking@~4.9.1":
   "integrity" "sha512-j3d0FVnvuzXA4DQhDVMeiobRzLvg1Yzlg0nF7I/Jvld/eW2Bb3qi7mVy6EWw1E8N7iA44633BHgM2u8ijMMdYQ=="
   "resolved" "https://registry.npmjs.org/@egjs/flicking/-/flicking-4.9.1.tgz"
   "version" "4.9.1"

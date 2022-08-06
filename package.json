@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.4.0",
     "@egjs/react-flicking": "^4.9.1",
     "@reduxjs/toolkit": "^1.8.3",
     "next": "latest",

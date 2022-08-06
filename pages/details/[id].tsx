@@ -14,7 +14,7 @@ const Details = () => {
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/original${details?.backdrop_path})`,
         }}
-        className=" bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12"
+        className=" bg-cover bg-center bg-no-repeat p-5 md:px-9 lg:px-12 backdrop-opacity- "
       >
         <Navbar />
         <DetailsHero />

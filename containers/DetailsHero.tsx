@@ -13,8 +13,8 @@ const Details = () => {
   
   
   return (
-    <div className="mt-10 flex flex-col items-start justify-center font-gilmed text-white md:mt-14">
-      <span className="mt-2 md:order-first md:mt-0 md:mb-4 lg:text-xl">
+    <div className="mt-10 flex flex-col items-start justify-center font-gilmed text-white md:mt-14 pt-20 md:pt-24 ">
+      <span className=" md:order-first md:mt-0 md:mb-4 lg:text-xl">
         {`2021 | PG-13 | ${details?.runtime} mins`}
       </span>
       <h1 className="w-1/2 font-gilbold text-2xl mt-6 uppercase leading-[2rem] md:leading-[3rem] md:text-[2.5rem] lg:text-[5rem] lg:leading-[6rem]">

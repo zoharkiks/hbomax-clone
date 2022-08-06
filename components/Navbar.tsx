@@ -10,11 +10,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between rounded-[20px] bg-black bg-opacity-40  p-6 font-gilmed backdrop-blur-[10px] md:px-12   ">
+    <div className="left-0 right-0 top-[2%] mx-auto my-0 flex items-center justify-between rounded-[20px] bg-black bg-opacity-40 p-6 font-gilmed backdrop-blur-[10px]  fixed z-10 md:w-[90%] md:px-12   ">
       <img className="" src={images.logo.src} alt="logo" />
       <Icon
         onClick={toggleMenu}
-        className="h-5 w-5 cursor-pointer text-white md:hidden"
+        className={`h-5 w-5 cursor-pointer text-white md:hidden ${opened?"hidden":""}`}
         icon="typcn:th-menu"
       />
 
@@ -30,10 +30,10 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="hidden md:flex justify-evenly items-center md:space-x-1 lg:space-x-9  ">
+      <div className="hidden items-center justify-evenly md:flex md:space-x-1 lg:space-x-9  ">
         <form className=" flex items-center justify-between  rounded-[10px] bg-white bg-opacity-60 p-3 md:py-1  ">
           <Icon
-            className=" h-4 w-4 mr-2 text-white"
+            className=" mr-2 h-4 w-4 text-white"
             icon="ant-design:search-outlined"
           />
           <input
@@ -51,11 +51,10 @@ const Navbar = () => {
       </div>
 
       {opened ? (
-        <div className="absolute right-0 top-0 w-max flex-col rounded-[20px] bg-black bg-opacity-40 py-6 px-4 text-white backdrop-blur-[200px]  ">
-          <div className="mb-6 flex items-center justify-between ">
-            <img className="" src={images.logo.src} alt="logo" />
+        <div className=" absolute right-0 top-0  w-max flex-col rounded-[20px] bg-black bg-opacity-40 py-6 px-4 text-white backdrop-blur-[200px]  ">
+          <div className="mb-6 flex items-center justify-end ">
             <Icon
-              className="h-5 w-5 text-white"
+              className="h-5 w-5 text-white" 
               icon="ant-design:close-circle-filled"
               onClick={toggleMenu}
             />
