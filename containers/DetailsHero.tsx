@@ -19,7 +19,7 @@ const Details = () => {
       </h1>
       <div className="mt-3 flex space-x-2 md:text-xl lg:text-3xl">
         {details?.genres?.map((genre) => (
-          <span className=" "> {genre.name} |</span>
+          <span key={genre.id} className=" "> {genre.name} |</span>
         ))}
       </div>
       <div className="lg:order- mt-5 flex items-center justify-center space-x-2 text-sm md:text-lg">

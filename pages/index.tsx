@@ -42,6 +42,7 @@ i
             <div
               className="w-10
             "
+            key={movie?.id}
             >
               <Hero
                 title={movie.title}

@@ -20,9 +20,9 @@ const Popular = () => {
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
-  const fetchDetails = (id) => {
+  const fetchDetails = (id,movieName) => {
     dispatch(getDetails(id));
-    router.push("/details/" + id);
+    router.push("/details/" + movieName);
   };
 
   return (
@@ -33,9 +33,9 @@ const Popular = () => {
           {movies?.slice(0, 10).map((movie: any) => (
             <div key={movie?.id} className='w-[35%] mr-4 md:w-[25%] lg:w-[15%] lg:mr-6 '>
               <PopularCard
-                
+                key={movie?.id}
                 image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                clickFunction={() => fetchDetails(movie.id)}
+                clickFunction={() => fetchDetails(movie.id,movie.title)}
               />
             </div>
           ))}

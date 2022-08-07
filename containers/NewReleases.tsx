@@ -14,9 +14,10 @@ const NewReleases = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const fetchDetails = (id) => {
+  const fetchDetails = (id,movieName) => {
     dispatch(getDetails(id));
-    router.push("/details/" + id);
+    router.push("/details/" + movieName);
+    
   };
 
   useEffect(() => {

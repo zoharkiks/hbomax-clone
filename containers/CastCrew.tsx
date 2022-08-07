@@ -21,7 +21,6 @@ const CastCrew = () => {
     dispatch(getCredits(details.id));
   }, [details]);
 
-  // console.log(test.cast?.[0].id);
 
   return (
     <div className="mt-4 flex flex-col font-gilbold text-lg text-white lg:mt-14">

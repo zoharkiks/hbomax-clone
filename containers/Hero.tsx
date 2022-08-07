@@ -35,8 +35,8 @@ const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string,
         <Button
           title="Watch Now"
           icon="ci:play-circle-outline"
-          extra="p-2.5 md:p-4 lg:p-6"
-          clickFunction={""}
+          extra="p-2.5 md:p-4 lg:p-6 backdrop-blur-[10px] bg-black bg-opacity-50 border-none "
+          clickFunction={null}
         />
       </div>
 
