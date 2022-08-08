@@ -12,7 +12,7 @@ import { getCredits } from "../features/movies/moviesSlice";
 const CastCrew = () => {
   const dispatch = useDispatch();
 
-  const details = useSelector((state) => state.movies.details);
+  const details = useSelector((state) => state.movies.details );
   const casts = useSelector((state) => state.movies.credits.cast);
   const crews = useSelector((state) => state.movies.credits.crew);
   const test = useSelector((state) => state.movies.credits);
