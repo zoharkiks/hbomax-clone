@@ -29,17 +29,17 @@ const NewReleases = () => {
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
-        <Flicking moveType="freeScroll" align="prev" circular={true}>
           {upcomingMovies?.slice(0, 16).map((movie: any) => (
             <div key={movie?.id} className="mr-4  ">
               <NewReleasesCard
+                key={movie?.id}
                 title={movie.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
           ))}
-        </Flicking>
+        
       </div>
     </div>
   );
