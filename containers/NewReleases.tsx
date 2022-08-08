@@ -10,12 +10,16 @@ import { useSelector, useDispatch } from "react-redux";
 // Reducers
 import { getDetails, getUpcomingMovies } from "../features/movies/moviesSlice";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+
 const NewReleases = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
   const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
-  
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
@@ -30,23 +34,26 @@ const NewReleases = () => {
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
-        <Flicking moveType="freeScroll" align="prev" circular={true}>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
           {upcomingMovies?.slice(0, 16).map((movie: any) => (
-            <div key={movie?.id} className="mr-4 flex  ">
-              {/* <NewReleasesCard
+            <SwiperSlide key={movie?.id} className="mr-4 flex  ">
+              <NewReleasesCard
                 key={movie?.id}
                 title={movie?.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
-              /> */}
-            <h1>Hi</h1>
-
-            </div>
+              />
+            </SwiperSlide>
           ))}
-        </Flicking>
+        </Swiper>
       </div>
     </div>
   );
-}
+};
 
 export default NewReleases;
