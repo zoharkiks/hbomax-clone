@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NewReleasesCard } from "../components";
+import { NewReleasesCard, PopularCard } from "../components";
 import { useRouter } from "next/router";
 
 // Carousel
@@ -15,6 +15,7 @@ const NewReleases = () => {
   const dispatch = useDispatch();
 
   const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
+  const movies = useSelector((state) => state.movies.popularMovies.results);
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
@@ -30,12 +31,14 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-          {upcomingMovies?.slice(0, 3).map((movie: any) => (
-            <div key={movie?.id} className="flex mr-4  ">
-              <NewReleasesCard
+        {movies?.slice(0, 10).map((movie: any) => (
+            <div
+              key={movie?.id}
+              className="mr-4 w-[35%] md:w-[25%] lg:mr-6 lg:w-[15%] "
+            >
+              <PopularCard
                 key={movie?.id}
-                title={movie.title}
-                image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
+                image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
