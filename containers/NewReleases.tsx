@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NewReleasesCard, PopularCard } from "../components";
+import { NewReleasesCard } from "../components";
 import { useRouter } from "next/router";
 
 // Carousel
@@ -15,7 +15,6 @@ const NewReleases = () => {
   const dispatch = useDispatch();
 
   const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
-  const movies = useSelector((state) => state.movies.popularMovies.results);
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
@@ -31,19 +30,18 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-        {movies?.slice(0, 10).map((movie: any) => (
-            <div
-              key={movie?.id}
-              className="mr-4 w-[35%] md:w-[25%] lg:mr-6 lg:w-[15%] "
-            >
-              <PopularCard
+          {upcomingMovies?.slice(0, 16).map((movie: any) => (
+            <div key={movie?.id} className="mr-4 flex  ">
+              {/* <NewReleasesCard
                 key={movie?.id}
-                image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                title={movie.title}
+                image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
-              />
+              /> */}
+              <h1>Test</h1>
             </div>
           ))}
-         {/* <div className="flex">
+          {/* <div className="flex">
             <NewReleasesCard
             title="hello"
             image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
@@ -53,8 +51,6 @@ const NewReleases = () => {
             image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
             />
          </div> */}
-
-         
         </Flicking>
       </div>
     </div>

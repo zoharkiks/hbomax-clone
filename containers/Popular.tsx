@@ -16,11 +16,9 @@ const Popular = () => {
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
-
   useEffect(() => {
     dispatch(getPopularMovies());
   }, []);
-
 
   const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));
