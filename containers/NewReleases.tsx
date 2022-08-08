@@ -30,8 +30,8 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-          {/* {upcomingMovies?.slice(0, 16).map((movie: any) => (
-            <div key={movie?.id} className="mr-4  ">
+          {upcomingMovies?.slice(0, 16).map((movie: any) => (
+            <div key={movie?.id} className="flex mr-4  ">
               <NewReleasesCard
                 key={movie?.id}
                 title={movie.title}
@@ -39,8 +39,8 @@ const NewReleases = () => {
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
-          ))} */}
-         <div className="flex">
+          ))}
+         {/* <div className="flex">
             <NewReleasesCard
             title="hello"
             image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
@@ -49,7 +49,7 @@ const NewReleases = () => {
             title="hello"
             image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
             />
-         </div>
+         </div> */}
 
          
         </Flicking>
