@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const Hero = ({title,rating,date,image}:{title:string,rating:string,date:string,image:string}) => {
 
-
+``
   return (
     <div style={{
       backgroundImage: `url(https://image.tmdb.org/t/p/original${image})`,
