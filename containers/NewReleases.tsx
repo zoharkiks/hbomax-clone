@@ -11,6 +11,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDetails, getUpcomingMovies } from "../features/movies/moviesSlice";
 
 const NewReleases = () => {
+
+  useEffect(() => {
+    dispatch(getUpcomingMovies());
+  }, []);
+
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -18,9 +23,7 @@ const NewReleases = () => {
 
   const tests = [{ name: "zohar", id: 1 }, { name: "mohar", id: 2 }, { name: "dohar", id: 3 }];
 
-  useEffect(() => {
-    dispatch(getUpcomingMovies());
-  }, []);
+
 
   const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));
@@ -33,11 +36,11 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-          {tests?.slice(0, 16).map((test: any) => (
+          {upcomingMovies?.slice(0, 16).map((test: any) => (
             <div key={test?.id} className="mr-4 flex  ">
               <NewReleasesCard
                 key={test?.id}
-                title={test.name}
+                title={test.title}
                 // image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 // clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
