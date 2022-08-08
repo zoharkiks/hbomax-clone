@@ -19,13 +19,13 @@ const Navbar = () => {
       />
 
       <ul className="hidden space-x-6 text-white md:flex lg:space-x-20">
-        <li>
+        <li className="hover:bg-white hover:text-black transition-all w-max p-1 rounded-lg">
           <a href="">Movies</a>
-        </li>
-        <li>
+        </li  >
+        <li className="hover:bg-white hover:text-black transition-all w-max p-1 rounded-lg">
           <a href="">TV Shows</a>
         </li>
-        <li>
+        <li className="hover:bg-white hover:text-black transition-all w-max p-1 rounded-lg">
           <a href="">Animations</a>
         </li>
       </ul>
@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
 
       {opened ? (
-        <div className=" absolute right-0 top-0  w-max flex-col rounded-[20px] bg-black bg-opacity-40 py-6 px-4 text-white backdrop-blur-[200px]  ">
+        <div className=" absolute right-0 top-0  w-max flex-col rounded-[20px] bg-black py-6 px-4 text-white backdrop-blur-[200px]  ">
           <div className="mb-6 flex items-center justify-end ">
             <Icon
               className="h-5 w-5 text-white" 

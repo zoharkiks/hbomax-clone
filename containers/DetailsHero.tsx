@@ -38,11 +38,14 @@ const Details = () => {
           title="Watch Now"
           icon="ci:play-circle-outline"
           extra="p-2.5 md:p-4 lg:p-6 backdrop-blur-[10px] bg-gray-400 bg-opacity-20 border-none"
+          clickFunction={null}
         />
         <Button
           title="Add In My List"
           icon="carbon:add-alt"
           extra="p-2.5 md:p-4 lg:p-6 border-white "
+          clickFunction={null}
+
         />
       </div>
 

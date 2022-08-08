@@ -6,7 +6,7 @@ import { CastCrew, DetailsHero } from "../../containers";
 import { useSelector, useDispatch } from "react-redux";
 
 const Details = () => {
-  const details = useSelector((state) => state.movies.details);
+  const details = useSelector((state) => state.movies.details )
 
   return (
     <div className="bg-black    ">
