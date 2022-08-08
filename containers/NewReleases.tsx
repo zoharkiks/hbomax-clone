@@ -17,9 +17,9 @@ const NewReleases = () => {
   const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
 
 
-  // useEffect(() => {
-  //   dispatch(getUpcomingMovies());
-  // }, []);
+  useEffect(() => {
+    dispatch(getUpcomingMovies());
+  }, []);
 
   const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));
