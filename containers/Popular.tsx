@@ -31,7 +31,7 @@ const Popular = () => {
       <h1 className="md:text-xl lg:text-3xl">Popular Collections</h1>
       <div className="mt-4 flex items-center ">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-          {movies.slice(0, 10).map((movie: any) => (
+          {movies?.slice(0, 10).map((movie: any) => (
             <div
               key={movie?.id}
               className="mr-4 w-[35%] md:w-[25%] lg:mr-6 lg:w-[15%] "
