@@ -12,7 +12,7 @@ const NewReleasesCard = ({
   return (
     <div
       onClick={clickFunction}
-      className={`flex h-[146px] cursor-pointer w-[176px] items-end rounded-[10px] bg-cover bg-center bg-no-repeat transition-all hover:scale-105 md:h-[220px] md:w-[250px] lg:h-[280px] lg:w-[338px]`}
+      className={`flex h-[160px] cursor-pointer w-[176px] items-end rounded-[10px] bg-cover bg-center bg-no-repeat transition-all hover:scale-105 md:h-[220px] md:w-[250px] lg:h-[280px] lg:w-[338px]`}
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className=" flex w-full flex-col justify-center bg-black bg-opacity-40 px-1.5 pt-1 backdrop-blur-[10px] md:py-2 lg:space-y-4 lg:p-5 ">

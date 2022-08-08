@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { PopularCard } from "../components";
+
 // Carousel
-import Flicking from "@egjs/react-flicking";
-import "@egjs/react-flicking/dist/flicking.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
 
 // Redux
 import { useSelector, useDispatch } from "react-redux";
@@ -25,25 +29,40 @@ const Popular = () => {
     router.push("/details/" + movieName);
   };
 
-  
   return (
     <div className="mt-20 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Popular Collections</h1>
       <div className="mt-4 flex items-center ">
-        <Flicking moveType="freeScroll" align="prev" circular={true}>
+        <Swiper
+          spaceBetween={23}
+          slidesPerView={2.5}
+          loop={true}
+          initialSlide={1}
+          freeMode={true}
+          modules={[FreeMode]}
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+            },
+
+            1028: {
+              slidesPerView: 5,
+            },
+            1536: {
+              slidesPerView: 6,
+            },
+          }}
+        >
           {movies?.slice(0, 10).map((movie: any) => (
-            <div
-              key={movie?.id}
-              className="mr-4 w-[35%] md:w-[25%] lg:mr-6 lg:w-[15%] "
-            >
+            <SwiperSlide>
               <PopularCard
                 key={movie?.id}
                 image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
-            </div>
+            </SwiperSlide>
           ))}
-        </Flicking>
+        </Swiper>
       </div>
     </div>
   );

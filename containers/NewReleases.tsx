@@ -3,17 +3,16 @@ import { NewReleasesCard } from "../components";
 import { useRouter } from "next/router";
 
 // Carousel
-import Flicking from "@egjs/react-flicking";
-import "@egjs/react-flicking/dist/flicking.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Reducers
 import { getDetails, getUpcomingMovies } from "../features/movies/moviesSlice";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
 
 const NewReleases = () => {
   const router = useRouter();
@@ -35,13 +34,23 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          spaceBetween={35}
+          slidesPerView={2}
+          loop={true}
+          initialSlide={1}
+          freeMode={true}
+          modules={[FreeMode]}
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+            },
+            1536: {
+              slidesPerView: 4,
+            },
+          }}
         >
-          {upcomingMovies?.slice(0, 16).map((movie: any) => (
-            <SwiperSlide key={movie?.id} className="mr-4 flex  ">
+          {upcomingMovies?.slice(0, 20).map((movie: any) => (
+            <SwiperSlide key={movie?.id}>
               <NewReleasesCard
                 key={movie?.id}
                 title={movie?.title}
