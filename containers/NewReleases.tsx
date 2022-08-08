@@ -35,13 +35,12 @@ const NewReleases = () => {
         <Flicking moveType="freeScroll" align="prev" circular={true}>
           {tests?.slice(0, 16).map((test: any) => (
             <div key={test?.id} className="mr-4 flex  ">
-              {/* <NewReleasesCard
-                key={movie?.id}
-                title={movie.title}
-                image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
-                clickFunction={() => fetchDetails(movie.id, movie.title)}
-              /> */}
-              <h1>Hello</h1>
+              <NewReleasesCard
+                key={test?.id}
+                title={test.name}
+                // image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
+                // clickFunction={() => fetchDetails(movie.id, movie.title)}
+              />
             </div>
           ))}
           {/* <div className="flex">
