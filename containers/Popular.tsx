@@ -20,7 +20,7 @@ const Popular = () => {
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
-  const fetchDetails = (id,movieName) => {
+  const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));
     router.push("/details/" + movieName);
   };
@@ -29,13 +29,16 @@ const Popular = () => {
     <div className="mt-20 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Popular Collections</h1>
       <div className="mt-4 flex items-center ">
-        <Flicking moveType='freeScroll' align='prev' circular={true} >
+        <Flicking moveType="freeScroll" align="prev" circular={true}>
           {movies?.slice(0, 10).map((movie: any) => (
-            <div key={movie?.id} className='w-[35%] mr-4 md:w-[25%] lg:w-[15%] lg:mr-6 '>
+            <div
+              key={movie?.id}
+              className="mr-4 w-[35%] md:w-[25%] lg:mr-6 lg:w-[15%] "
+            >
               <PopularCard
                 key={movie?.id}
                 image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                clickFunction={() => fetchDetails(movie.id,movie.title)}
+                clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
           ))}

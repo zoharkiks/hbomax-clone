@@ -10,7 +10,9 @@ const Details = () => {
   const details = useSelector((state) => state.movies.details)
 
   return (
-    <div className="mt-10 flex flex-col items-start justify-center pt-20 font-gilmed text-white md:mt-14 md:pt-24  ">
+    <div
+    
+    className=" mt-10 flex flex-col items-start justify-center pt-20 font-gilmed text-white md:mt-14 md:pt-24  ">
       <span className=" md:order-first md:mt-0 md:mb-4 lg:text-xl">
         {`2021 | PG-13 | ${details?.runtime} mins`}
       </span>
