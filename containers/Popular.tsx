@@ -11,8 +11,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPopularMovies, getDetails } from "../features/movies/moviesSlice";
 
 const Popular = () => {
-  const dispatch = useDispatch();
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const movies = useSelector((state) => state.movies.popularMovies.results);
 
