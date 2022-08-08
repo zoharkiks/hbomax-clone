@@ -54,10 +54,8 @@ const Home: NextPage = () => {
         </Flicking>
       </div>
       <div className="px-5 pb-7  md:px-9 lg:px-12">
-        
         <Popular />
-        <Popular />
-        {/* <NewReleases /> */}
+        <NewReleases />
       </div>
     </div>
   );

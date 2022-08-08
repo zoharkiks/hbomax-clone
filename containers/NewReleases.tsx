@@ -16,7 +16,6 @@ const NewReleases = () => {
 
   const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
 
-
   useEffect(() => {
     dispatch(getUpcomingMovies());
   }, []);
@@ -25,7 +24,6 @@ const NewReleases = () => {
     dispatch(getDetails(id));
     router.push("/details/" + movieName);
   };
-
 
   return (
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
@@ -37,7 +35,7 @@ const NewReleases = () => {
               <NewReleasesCard
                 title={movie.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
-                clickFunction={() => fetchDetails(movie.id)}
+                clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
           ))}
