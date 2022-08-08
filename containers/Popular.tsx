@@ -14,11 +14,13 @@ const Popular = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
+  const movies = useSelector((state) => state.movies.popularMovies.results);
+
+
   useEffect(() => {
     dispatch(getPopularMovies());
   }, []);
 
-  const movies = useSelector((state) => state.movies.popularMovies.results);
 
   const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));

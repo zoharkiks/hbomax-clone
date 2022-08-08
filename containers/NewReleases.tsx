@@ -14,16 +14,18 @@ const NewReleases = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const fetchDetails = (id, movieName) => {
-    dispatch(getDetails(id));
-    router.push("/details/" + movieName);
-  };
+  const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
+
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
   }, []);
 
-  const upcomingMovies = useSelector((state) => state.movies.upcoming.results);
+  const fetchDetails = (id, movieName) => {
+    dispatch(getDetails(id));
+    router.push("/details/" + movieName);
+  };
+
 
   return (
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
