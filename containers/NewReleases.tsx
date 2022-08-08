@@ -32,14 +32,15 @@ const NewReleases = () => {
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
-          {upcomingMovies?.map((movie: any) => (
+          {upcomingMovies?.slice(0, 16).map((movie: any) => (
             <div key={movie?.id} className="mr-4 flex  ">
-              <NewReleasesCard
+              {/* <NewReleasesCard
                 key={movie?.id}
                 title={movie?.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
-              />
+              /> */}
+              <h1>Hi</h1>
             </div>
           ))}
         </Flicking>
