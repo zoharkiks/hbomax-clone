@@ -40,13 +40,18 @@ const NewReleases = () => {
               />
             </div>
           ))} */}
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
-          <h1>Test TEst Test TEst</h1>
+         <div className="flex">
+            <NewReleasesCard
+            title="hello"
+            image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+            />
+             <NewReleasesCard
+            title="hello"
+            image="https://image.tmdb.org/t/p/w300//kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg"
+            />
+         </div>
+
+         
         </Flicking>
       </div>
     </div>
