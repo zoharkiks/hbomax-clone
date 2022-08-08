@@ -36,7 +36,7 @@ const NewReleases = () => {
             <div key={movie?.id} className="mr-4 flex  ">
               <NewReleasesCard
                 key={movie?.id}
-                title={movie.title}
+                title={movie?.title}
                 image={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
