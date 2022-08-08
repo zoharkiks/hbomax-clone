@@ -29,8 +29,8 @@ const NewReleases = () => {
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
       <div className="mt-5 flex">
-        <Flicking >
-          {upcomingMovies?.slice(0, 16).map((movie: any) => (
+        <Flicking moveType="freeScroll" align="prev" circular={true}>
+          {/* {upcomingMovies?.slice(0, 16).map((movie: any) => (
             <div key={movie?.id} className="mr-4  ">
               <NewReleasesCard
                 key={movie?.id}
@@ -39,7 +39,14 @@ const NewReleases = () => {
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
-          ))}
+          ))} */}
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
+          <h1>Test TEst Test TEst</h1>
         </Flicking>
       </div>
     </div>
