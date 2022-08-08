@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // Carousel
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
@@ -10,6 +10,8 @@ import { AutoPlay, Fade } from "@egjs/flicking-plugins";
 import { Hero, NewReleases, Popular } from "../containers";
 // import components
 import { Navbar } from "../components";
+import { useEffect } from "react";
+import { getUpcomingMovies } from "../features/movies/moviesSlice";
 
 const Home: NextPage = () => {
   const plugins = [
@@ -17,7 +19,13 @@ const Home: NextPage = () => {
     new Fade(),
   ];
 
+const dispatch = useDispatch();
+
   const movies = useSelector((state) => state.movies.popularMovies.results);
+
+  useEffect(() => {
+    dispatch(getUpcomingMovies());
+  }, []);
 
   return (
     <div className="bg-black ">

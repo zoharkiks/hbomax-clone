@@ -25,7 +25,6 @@ const Popular = () => {
     router.push("/details/" + movieName);
   };
 
-  console.log(movies);
   
   return (
     <div className="mt-20 flex flex-col font-gilbold text-lg text-white">
