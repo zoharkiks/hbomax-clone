@@ -31,7 +31,7 @@ const NewReleases = () => {
       <div className="mt-5 flex">
         <Flicking moveType="freeScroll" align="prev" circular={true}>
           {upcomingMovies?.slice(0, 16).map((movie: any) => (
-            <div key={movie?.id} className="mr-4  ">
+            <div key={movie?.id} className="mr-4 w-[40%] md:w-[37%] lg:w-[25F%]  ">
               <NewReleasesCard
                 key={movie?.id}
                 title={movie.title}
