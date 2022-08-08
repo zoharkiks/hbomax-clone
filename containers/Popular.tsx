@@ -38,7 +38,7 @@ const Popular = () => {
             >
               <PopularCard
                 key={movie?.id}
-                image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                image={`https://image.tmdb.org/t/p/w300/${movie?.poster_path}`}
                 clickFunction={() => fetchDetails(movie.id, movie.title)}
               />
             </div>
