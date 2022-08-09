@@ -8,7 +8,7 @@
 <br>
 
 ## Introduction 🚀
-<p>An HBO Max Clone that uses TMDB Api to fecth data. Users can lookup popular and upcoming movies, and can also find details such as the movie overview, cast and crew members, genres etc. </p>
+<p>A fully responsive HBO Max Clone that uses TMDB api to fetch data. Users can lookup popular and upcoming movies, and can also find details such as the movie overview, cast and crew members, genres etc. </p>
 <br>
 
 <h3 align="left">Planned Features 📅 </h3>
