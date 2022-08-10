@@ -29,6 +29,9 @@ const NewReleases = () => {
     router.push("/details/" + movieName);
   };
 
+  console.table(upcomingMovies?.[0]);
+  
+  
   return (
     <div className="mt-8 flex flex-col font-gilbold text-lg text-white">
       <h1 className="md:text-xl lg:text-3xl">Upcoming Movies</h1>
