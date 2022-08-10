@@ -29,7 +29,6 @@ const NewReleases = () => {
     router.push("/details/" + movieName);
   };
 
-  console.table(upcomingMovies?.[0]);
   
   
   return (
