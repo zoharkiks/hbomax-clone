@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Navbar } from "../../components";
-import { CastCrew, DetailsHero } from "../../containers";
+import { CastCrew, DetailsHero, Videos } from "../../containers";
 
 // Redux
 import { useSelector, useDispatch } from "react-redux";
@@ -21,6 +21,7 @@ const Details = () => {
       </div>
 
       <div className="p-5  md:px-9 lg:px-12">
+        <Videos/>
         <CastCrew />
       </div>
     </div>

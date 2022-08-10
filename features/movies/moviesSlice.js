@@ -1,14 +1,15 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { moviesData } from "../../data";
 
-
 // Urls
 const popularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=1`;
 const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=1`;
-const detailsUrl = (id) => `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`;
-const creditsUrl = (id) => `https://api.themoviedb.org/3/movie/${id}/credits?api_key=e016abd8fd5b202fceaaa65050c9fdf3&language=en-US`;
-
-
+const detailsUrl = (id) =>
+  `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`;
+const creditsUrl = (id) =>
+  `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`;
+const videosUrl = (id) =>
+  `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`;
 
 // Reducers
 export const getPopularMovies = createAsyncThunk(
@@ -29,26 +30,31 @@ export const getUpcomingMovies = createAsyncThunk(
   }
 );
 
-export const getDetails  = createAsyncThunk("movies/getDetails", (id) => {
+export const getDetails = createAsyncThunk("movies/getDetails", (id) => {
   return fetch(detailsUrl(id))
     .then((resp) => resp.json())
     .catch((err) => console.log(error));
 });
 
-export const getCredits  = createAsyncThunk("movies/getCredits", (id) => {
+export const getCredits = createAsyncThunk("movies/getCredits", (id) => {
   return fetch(creditsUrl(id))
     .then((resp) => resp.json())
     .catch((err) => console.log(error));
 });
 
-
+export const getVideos = createAsyncThunk("movies/getVideos", (id) => {
+  return fetch(videosUrl(id))
+    .then((resp) => resp.json())
+    .catch((err) => console.log(error));
+});
 
 // Initial State
 const initialState = {
   popularMovies: [],
   upcoming: [],
   details: [],
-  credits:[],
+  credits: [],
+  videos: [],
   isLoading: true,
 };
 
@@ -105,9 +111,18 @@ const moviesSlice = createSlice({
       state.isLoading = false;
     },
 
-
+    // Video Details
+    [getVideos.pending]: (state, action) => {
+      state.isLoading = true;
+    },
+    [getVideos.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.videos = action.payload;
+    },
+    [getVideos.rejected]: (state) => {
+      state.isLoading = false;
+    },
   },
-
 });
 
 export const { clearMovies } = moviesSlice.actions;

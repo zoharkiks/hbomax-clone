@@ -12,7 +12,7 @@ import "swiper/css";
 // Redux
 import { useSelector, useDispatch } from "react-redux";
 // Reducers
-import { getPopularMovies, getDetails } from "../features/movies/moviesSlice";
+import { getPopularMovies, getDetails, getVideos } from "../features/movies/moviesSlice";
 
 const Popular = () => {
   const router = useRouter();
@@ -26,6 +26,7 @@ const Popular = () => {
 
   const fetchDetails = (id, movieName) => {
     dispatch(getDetails(id));
+    dispatch(getVideos(id));
     router.push("/details/" + movieName);
   };
 

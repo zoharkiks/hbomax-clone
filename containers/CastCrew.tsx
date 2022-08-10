@@ -26,7 +26,7 @@ const CastCrew = () => {
 
   return (
     <div className="mt-4 flex flex-col font-gilbold text-lg text-white lg:mt-14">
-      <h1 onClick={() => console.log(casts)} className="md:text-xl lg:text-3xl">
+      <h1  className="md:text-xl lg:text-3xl">
         Cast
       </h1>
       <div className="mt-5 flex">
