@@ -13,9 +13,9 @@
 
 <h3 align="left">Planned Features 📅 </h3>
 <ul>
+<li> <s> Trailers 🎥</s> </li>
 <li>Search Functionality 🔍</li>
 <li> User Login 🙍‍♂️</li>
-<li> Trailers 🎥</li>
 </ul>
 <br>
 
