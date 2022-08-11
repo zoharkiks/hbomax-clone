@@ -12,7 +12,6 @@ import "swiper/css";
 import { Hero, NewReleases, Popular } from "../containers";
 // import components
 import { Navbar } from "../components";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const Home: NextPage = () => {
   const movies = useSelector((state) => state.movies.popularMovies.results);

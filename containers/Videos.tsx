@@ -63,23 +63,23 @@ const Videos = () => {
             />
           </div>
 
-          <div className="lg:w-1/2 lg:h-[75%] fixed top-1/2 left-1/2 z-50 flex h-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-md bg-gray-400  p-2 text-black drop-shadow-lg ">
+          <div className="fixed top-1/2 left-1/2 z-50 flex h-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-md bg-gray-400 p-2 text-black  drop-shadow-lg lg:h-[75%] lg:w-1/2 ">
+            <Icon
+              className="absolute z-10 h-1/2 w-1/2 text-gray-300"
+              icon="clarity:video-gallery-line"
+            />
 
-          <Icon className="h-1/2 w-1/2 absolute z-10 text-gray-300" icon="clarity:video-gallery-line" />
-
-          
-              <iframe
-                className="h-full w-full z-20 "
-                loading="eager"
-                width="800"
-                height="700"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title="YouTube video player"
-                frameBorder="5"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            
+            <iframe
+              className="z-20 h-full w-full "
+              loading="eager"
+              width="800"
+              height="700"
+              src={`https://www.youtube.com/embed/${videoId}`}
+              title="YouTube video player"
+              frameBorder="5"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       ) : null}

@@ -83,8 +83,7 @@ const CastCrew = () => {
               slidesPerView: 5.5,
             },
             1536: {
-              slidesPerView: 8,
-              spaceBetween: 10,
+              slidesPerView: 7,
             },
           }}
           >
