@@ -33,7 +33,7 @@ const CastCrew = () => {
         <Swiper
           spaceBetween={20}
           slidesPerView={3.5}
-          loop={true}
+          loop={false}
           initialSlide={0}
           freeMode={true}
           modules={[FreeMode]}
@@ -70,7 +70,7 @@ const CastCrew = () => {
           <Swiper
           spaceBetween={20}
           slidesPerView={3.5}
-          loop={true}
+          loop={false}
           initialSlide={0}
           freeMode={true}
           modules={[FreeMode]}
