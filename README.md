@@ -1,4 +1,4 @@
-<h1 align="center">HBO Max CLone</h3> 
+<h1 align="center">HBO Max Clone</h3> 
 <p> <a href="https://hbomax-clone-one.vercel.app/"><h3 align="center" >Live Site</h3></a>
 
 
